@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+/* Animate the truck */
+@keyframes moveTruck {
+    0%{ transform: translateX(+100%); }
+    100% { transform: translateX(100%); }
+}
+
+.truck-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.truck {
+    position: absolute;
+    top: 100%;
+    left: -100px; /* Initial position off the screen */
+    width: 100px; /* Adjust size as needed */
+    animation: moveTruck 20s linear infinite; /* Adjust animation duration and timing function as needed */
+}
